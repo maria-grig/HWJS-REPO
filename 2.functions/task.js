@@ -1,24 +1,24 @@
-function getArrayParams(...arr) {
+"use strict";
 
-  return { min: min, max: max, avg: avg };
-}
+// Задание 1
 
-function summElementsWorker(...arr) {
+function getArrayParams(arr) {
 
-}
+  let min = arr[0];
+  let max = arr[0];
+  let sum = arr[0];
 
-function differenceMaxMinWorker(...arr) {
-
-}
-
-function differenceEvenOddWorker(...arr) {
-
-}
-
-function averageEvenElementsWorker(...arr) {
-
-}
-
-function makeWork (arrOfArr, func) {
-
+  for (let i = 0; i < arr.length; i++)
+  {
+    if (arr[i] < min)
+    {
+      min = arr[i]
+    }
+    if (arr[i] > max){
+      max = arr[i]
+    }
+      sum += arr[i];
+  }
+    let avg = sum / arr.length;
+    return { min: min, max: max, avg: Number (avg.toFixed(2)) };
 }
